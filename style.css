@@ -1,0 +1,148 @@
+
+
+.header {
+    background-color: black;
+    margin: 0px;
+    text-align: center;
+    height: 100px;
+    padding: 35px;
+    border-radius: 6px;
+}
+.navbar{
+  background-color: rgba(255, 8, 0, 0.774);
+  /* display: flex; */
+  color: rgba(0, 0, 0, 0.979);
+  /* justify-content: center ; */
+  position: relative;
+  height: 65px;
+  padding: 20px;
+border-radius: 6px;
+
+}
+.underline {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.navbox{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%,-50%);
+ margin:30px;
+}
+
+li{
+  display:inline-block;
+  padding: 5px;
+  margin: 2px;
+  font-size: x-large;
+}
+  .main {
+    height: 700px;
+background-image:url("https://images.hdqwalls.com/download/kylo-ren-star-wars-1920x1080.jpg");
+background-size: cover;
+position: relative;
+margin:20px;
+  border: 4px solid rgb(211, 80, 80);
+  border-radius:20px ;
+  }
+.position1 {
+    position: absolute;
+    left: 50%;  
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color:gold;
+}
+.bts {
+  position:absolute;
+  left: 45%;
+  top: 70%;
+  border-radius: 800px;
+  /* transform: translate(-50%,-50%); */
+  padding: 15px;
+  background-color: black;
+  color: yellow;
+  border: 2px solid white;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 5px 5px 10px rgba(0, 140, 255, 0.5);
+opacity: 1;
+}
+.bts:hover{
+  transform: scale(1.1);
+  background-color: rgb(12, 67, 168);
+  color:rgb(255, 255, 255);
+  border-color: black;
+  opacity: 0.7;
+}
+.mts {
+  background-image: url("https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2023/04/20/The-mandalorian-season-4.jpg");
+  height: 675px;
+  background-size: cover;
+  position: relative;
+  margin:20px;
+  border: 4px solid rgb(211, 82, 78);
+  border-radius:20px ;
+}
+.ats {
+  background-image: url("https://4kwallpapers.com/images/wallpapers/ahsoka-tano-star-3840x2160-12822.jpg");
+  height: 675px;
+  background-size: cover;
+  position: relative;
+  margin:20px;
+  border: 4px solid rgb(211, 82, 82);
+  border-radius:20px ;
+}
+.lts {
+  position: absolute;
+  left: 5%;
+  top: 30%;
+  color: white; }
+  .yts {
+    position: absolute;
+    top: 54%;
+    font-size:x-large;
+    left: 5%;
+    color: white;
+  }
+
+  .kts {
+    background-color: yellow;
+    padding: 8px;
+    margin: 5px;
+    position:absolute;
+    top: 65%;
+    left: 10%;
+    border-radius: 700px;
+    font-family: 'Montserrat', sans-serif;
+    width: 150px;
+    height: 50px;
+    transition:transform 0.2s;
+  }
+
+  .kts:hover{
+    transform:scale(1.2) ;
+    opacity: 0.7;
+    background-color: black;
+    color:white;
+  }
+
+  .footer {
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    padding: 7px;
+    text-align: center;
+  }
+
+  .footie {
+  text-align: center;
+  color: white;
+  }
+  
+
+  
+
+/* <a href="https://www.starwars.com/news">NEWS + FEATURES</a> */
+  
+

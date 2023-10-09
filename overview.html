@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap Form Example</title>
+    <!-- Add Bootstrap CSS link -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body style="background-color: black">
+    <div class="container mt-5">
+      <h1 style="color: white">Choose a Film:</h1>
+      <form>
+        <label for="carSelect">Select a Film:</label>
+        <select id="carSelect" onchange="showCarImage()" class="form-control">
+          <option value="">Select a Film</option>
+          <option value="Star Wars: The rise of Skywalker">
+            Star Wars: The rise of Skywalker
+          </option>
+          <option value="Solo: A Star Wars Story">
+            Solo: A Star Wars Story
+          </option>
+          <option value="Star Wars: The Last Jedi">
+            Star Wars: The Last Jedi
+          </option>
+          <option value="Rogue One: A Star Wars Story">
+            Rogue One: A Star Wars Story
+          </option>
+          <option value="Star Wars: The Last Jedi">
+            Star Wars: The Last Jedi
+          </option>
+          <option value="Star Wars: The Force Awakens">
+            Star Wars: The Force Awakens
+          </option>
+          
+
+          <!-- Add the "Show All" option with value "all" -->
+          <option value="all">Show All</option>
+        </select>
+
+        <div id="carImageContainer">
+          <img
+            id="carImage"
+            src=""
+            alt="Selected Car"
+            style="display: none"
+            width="500"
+            class="img-thumbnail"
+          />
+        </div>
+        <div>
+          <button>Purchase</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      function showCarImage() {
+        const carSelect = document.getElementById("carSelect");
+        const carImage = document.getElementById("carImage");
+        const carImageContainer = document.getElementById("carImageContainer");
+
+        // Get the value of the selected option
+        const selectedCar = carSelect.value;
+
+        // Define image URLs for each car option
+        const carImages = {
+          "Star Wars: The rise of Skywalker":
+            "https://m.media-amazon.com/images/M/MV5BMDljNTQ5ODItZmQwMy00M2ExLTljOTQtZTVjNGE2NTg0NGIxXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg",
+          "Solo: A Star Wars Story":
+            "https://lumiere-a.akamaihd.net/v1/images/solo_tall-ratios_6eef8fff.jpeg?region=0%2C0%2C1536%2C864",
+          "Star Wars: The Last Jedi":
+            "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/1A17D0D449D5A9E24FD41D3A849B47FF902363B58410EBF2EC49349D62C7AEBF/scale?width=1200&aspectRatio=1.78&format=jpeg",
+          "Rogue One: A Star Wars Story":
+            "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D3809B73B53FFBB773074253004B5CD03030BDAA3DDAB291E927BA38453A9EFE/scale?width=1200&aspectRatio=1.78&format=jpeg",
+          "Star Wars: The Force Awakens":
+            "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2015%2F10%2Ftfa_poster_wide_header-1536x864-324397389357.jpg&q=60",
+          
+        };
+
+        // Check if the "Show All" option is selected, then display all images
+        if (selectedCar === "all") {
+          let allCarImages = "";
+          for (const car in carImages) {
+            allCarImages += `<img src="${carImages[car]}" alt="${car}" width="500" class="img-thumbnail">`;
+          }
+          carImageContainer.innerHTML = allCarImages;
+          carImageContainer.style.display = "block";
+        } else if (selectedCar && carImages[selectedCar]) {
+          // Display the corresponding image for the selected car
+          carImage.src = carImages[selectedCar];
+          carImage.style.display = "block";
+          carImageContainer.style.display = "block";
+        } else {
+          // Hide the image container if no option selected or invalid option
+          carImage.style.display = "none";
+          carImageContainer.style.display = "none";
+        }
+      }
+    </script>
+
+    <!-- Add Bootstrap JS and jQuery links (optional, only needed for certain Bootstrap features) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
